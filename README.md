@@ -20,12 +20,13 @@ You will need:
 * USB stick (the system will be running from it — so it should be fast enough)
 * Serial console access
 
-The installation process is pretty easy:
+First prepare your USB stick. Create an ext2 partition and label it as `root`.
 
-1. Prepare your USB stick. Create an ext2 partition and label it as `root`.
-2. Download [rootfs image](https://github.com/kirov/stora-debian-install/releases/download/v20140114/stora-debian-rootfs_20140114.tar.gz) and unpack it to your flash drive.
-3. Connect [serial cable](http://www.openstora.com/wiki/index.php?title=Root_Access_Via_Serial_Console) to your Stora.
-4. Power on the unit, press any key when you see `Hit any key to stop autoboot` and enter:
+Download [rootfs image](https://github.com/kirov/stora-debian-install/releases/download/v20140114/stora-debian-rootfs_20140114.tar.gz) and unpack it to your flash drive.
+
+Connect [serial cable](http://www.openstora.com/wiki/index.php?title=Root_Access_Via_Serial_Console) to your Stora.
+
+Power on the unit, press any key when you see `Hit any key to stop autoboot` and enter:
 
     setenv mainlineLinux yes
     setenv arcNumber 2743
@@ -34,7 +35,7 @@ The installation process is pretty easy:
     saveenv
     reset
 
-5. Stora will reboot and Debian will start. Default root password: `111222`.
+Stora will reboot and Debian will start. Default root password: `111222`.
 
 
 ## How to build your own rootfs
