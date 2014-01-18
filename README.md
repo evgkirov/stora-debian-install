@@ -24,9 +24,7 @@ First prepare your USB stick. Create an ext2 partition and label it as `root`.
 
 Download [rootfs image](https://github.com/kirov/stora-debian-install/releases/download/v20140114/stora-debian-rootfs_20140114.tar.gz) and unpack it to your flash drive.
 
-Connect [serial cable](http://www.openstora.com/wiki/index.php?title=Root_Access_Via_Serial_Console) to your Stora.
-
-Power on the unit, press any key when you see `Hit any key to stop autoboot` and enter:
+Connect [serial cable](http://www.openstora.com/wiki/index.php?title=Root_Access_Via_Serial_Console) to your Stora. Power on the unit, press any key when you see `Hit any key to stop autoboot` and enter:
 
     setenv mainlineLinux yes
     setenv arcNumber 2743
@@ -111,7 +109,7 @@ after that. Don't select encodings other than UTF-8. For other languages, select
 
 This way Debian will speak your mother tongue. The output shoud look like [this](http://pastebin.com/hTR01wUh).
 
-It's time to install the kernel. 
+It's time to install the kernel. You can [build your own kernel](https://github.com/kirov/stora-debian-kernel) if you want.
 
     cd /root
     rm -f /etc/blkid.tab
